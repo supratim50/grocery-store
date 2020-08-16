@@ -1,8 +1,6 @@
-import { FaRupeeSign } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 
 import ProductSmallImage from "./productSmallImage";
-import SecondaryBtn from "../buttons/buttonSecondary";
 import PrimaryBtn from "../buttons/primaryButton";
 import Quantity from "../quantity/quantity";
 
@@ -16,7 +14,6 @@ const roductDetails = ({
   show,
   close,
 }) => {
-  console.log(smallImages);
   return (
     <>
       <div

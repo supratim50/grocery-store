@@ -3,6 +3,8 @@ import ButtonSecondary from "../buttons/buttonSecondary";
 import Quantity from "../quantity/quantity";
 import ProductDetails from "./productDetails";
 
+import { FaShoppingCart } from "react-icons/fa";
+
 const Product = ({
   imageUrl,
   price,
@@ -49,7 +51,12 @@ const Product = ({
             {cart ? (
               <Quantity onPress={addToCart} />
             ) : (
-              <ButtonSecondary classList="rounded-pill" onPress={addToCart} />
+              <ButtonSecondary
+                text="cart"
+                icon={<FaShoppingCart />}
+                classList="rounded-pill"
+                onPress={addToCart}
+              />
             )}
           </div>
         </div>

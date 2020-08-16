@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaQuestionCircle, FaSearch, FaBars } from "react-icons/fa";
+import Link from "next/link";
 
 import SearchBar from "../searchBar/searchBar";
 import ProductDropdown from "../buttons/productDropdown";
@@ -54,11 +55,15 @@ const Navbar = () => {
           >
             <FaBars />
           </i>
-          <img
-            src="/assets/images/Logo.svg"
-            alt="Logo"
-            style={{ maxWidth: 110 }}
-          />
+          <Link href="/">
+            <a>
+              <img
+                src="/assets/images/Logo.svg"
+                alt="Logo"
+                style={{ maxWidth: 110 }}
+              />
+            </a>
+          </Link>
         </div>
         <div className="nav d-flex align-items-center justify-content-end flex-lg-fill">
           {/* search */}

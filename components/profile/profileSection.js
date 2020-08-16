@@ -1,56 +1,154 @@
 import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
+
 import Input from "../form/input";
 import PrimaryButton from "../buttons/primaryButton";
+import SecondaryButton from "../buttons/buttonSecondary";
 import DetailsCard from "../cards/detailCard";
+import EnterDetails from "../details/enterDetails";
+import PaymentCard from "../cards/paymentCard";
 
 const ProfileSection = () => {
-  const [close, setClose] = useState(false);
+  const [addEditContact, setAddEditContact] = useState(false);
+  const [addEditAddress, setAddEditAddress] = useState(false);
 
-  const closeFunc = () => {
-    setClose(true);
+  const addEditContactFunc = () => {
+    setAddEditContact(!addEditContact);
+  };
+  const addEditAddressFunc = () => {
+    setAddEditAddress(!addEditAddress);
   };
 
   return (
-    <section className="section-pb">
-      <div className="container">
-        <h1
-          className="font-weight-bold color-secondary mb-4 mb-lg-5"
-          style={{ fontSize: 25 }}
-        >
-          Your Profile
-        </h1>
-        <div className="row mx-auto section-pb">
-          <div className="col-12 col-lg-5 px-0 px-lg-3 mt-3 mt-lg-0 border">
-            <Input lebel="Name" />
-          </div>
-          <div className="col-12 col-lg-5 px-0 px-lg-3 mt-3 mt-lg-0 border">
-            <Input lebel="Email" />
-          </div>
-          <div className="col-12 col-lg-2 px-0 px-lg-3 mt-3 mt-lg-0 border d-flex align-items-end">
-            <PrimaryButton text="send" classList="w-100 align-items-end" />
-          </div>
-        </div>
-        {/* contact details */}
-        <h2 className="paragraph-text font-weight-bold color-secondary mb-4 text-capitalize">
-          Contact Number
-        </h2>
-        <div className="row mx-auto">
-          <div
-            className={`col-12 col-lg-4 px-0 px-lg-3 border ${
-              close ? "d-none" : ""
-            }`}
+    <>
+      <section className="section-pb">
+        <div className="container">
+          <h1
+            className="font-weight-bold color-secondary mb-4 mb-lg-5 px-3"
+            style={{ fontSize: 25 }}
           >
-            <DetailsCard title="Primary" hover detailsClose={closeFunc} />
+            Your Profile
+          </h1>
+          <div className="row mx-auto section-pb">
+            <div className="col-12 col-lg-5 px-0 px-lg-3 mt-3 mt-lg-0">
+              <Input lebel="Name" placeholder="Name" />
+            </div>
+            <div className="col-12 col-lg-5 px-0 px-lg-3 mt-3 mt-lg-0">
+              <Input lebel="Email" placeholder="Email" />
+            </div>
+            <div className="col-12 col-lg-2 px-0 px-lg-3 mt-3 mt-lg-0 d-flex align-items-end">
+              <PrimaryButton text="send" classList="w-100 align-items-end" />
+            </div>
           </div>
+          {/* contact details */}
+          <h2 className="paragraph-text font-weight-bold color-secondary mb-4 text-capitalize px-3">
+            Contact Number
+          </h2>
+          <div className="row mx-auto section-pb">
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <DetailsCard
+                title="Primary"
+                paragraph="123 123 123"
+                active
+                hover
+                editFunction={addEditContactFunc}
+              />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <DetailsCard
+                title="Secondary"
+                paragraph="123 123 123"
+                hover
+                editFunction={addEditContactFunc}
+              />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3 `}>
+              <SecondaryButton
+                classList="h-100 rounded-lg"
+                text="Add Contact"
+                onPress={addEditContactFunc}
+              />
+            </div>
+          </div>
+          {/* contact details end */}
+          {/* address details */}
+          <h2 className="paragraph-text font-weight-bold color-secondary mb-4 text-capitalize px-3">
+            Contact Number
+          </h2>
+          <div className="row mx-auto section-pb">
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <DetailsCard
+                title="Primary"
+                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+                active
+                hover
+              />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3 `}>
+              <DetailsCard
+                title="Secondary"
+                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+                hover
+              />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <SecondaryButton
+                classList="h-100 rounded-lg"
+                text="Add Address"
+                onPress={addEditAddressFunc}
+              />
+            </div>
+          </div>
+          {/* address details end */}
+          {/* add credit card */}
+          <h2 className="paragraph-text font-weight-bold color-secondary mb-4 text-capitalize px-3">
+            Payment Option
+          </h2>
+          <div className="d-flex justify-content-between align-items-center px-3">
+            <p className="paragraph-sm color-primary font-weight-bold">
+              Saved Cards
+            </p>
+            <p className="paragraph-sm color-primary font-weight-bold">
+              <i className="mr-2">
+                <FiPlus />
+              </i>{" "}
+              Add Cards
+            </p>
+          </div>
+          {/* cards */}
+          <div className="row mx-auto">
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <PaymentCard active imageUrl="/assets/images/paypal.png" />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <PaymentCard imageUrl="/assets/images/master-card.png" />
+            </div>
+            <div className={`col-12 col-lg-4 px-0 px-lg-3 mt-3`}>
+              <PaymentCard imageUrl="/assets/images/visa.png" />
+            </div>
+          </div>
+          {/* add credit card end */}
         </div>
-        {/* contact details end */}
-      </div>
+      </section>
+      {/* for editing and enter popup form  */}
+      {/* edit contact */}
+      {addEditContact ? (
+        <EnterDetails show input onPress={addEditContactFunc} />
+      ) : (
+        ""
+      )}
+      {/* edit address */}
+      {addEditAddress ? (
+        <EnterDetails show input textarea onPress={addEditAddressFunc} />
+      ) : (
+        ""
+      )}
       <style jsx>{`
         section {
           padding-top: 150px !important;
         }
       `}</style>
-    </section>
+    </>
   );
 };
 

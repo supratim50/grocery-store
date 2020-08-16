@@ -1,17 +1,18 @@
 import React from "react";
 
-const Input = ({ lebel, placeholder, classList }) => {
+const Textarea = ({ placeholder, classList }) => {
   return (
     <div className={`${classList ? classList : ""}`}>
-      <p className="paragraph-text font-weight-bold color-secondary mb-3">
-        {lebel && lebel}
-      </p>
-      <input
+      <textarea
         className="w-100 border-0 py-3 px-4 color-grey background-grey paragraph-text rounded-lg"
         placeholder={placeholder && placeholder}
-      />
+      ></textarea>
       <style jsx>{`
-        input:focus {
+        textarea {
+          height: 150px;
+          resize: none;
+        }
+        textarea:focus {
           outline: none;
         }
       `}</style>
@@ -19,4 +20,4 @@ const Input = ({ lebel, placeholder, classList }) => {
   );
 };
 
-export default Input;
+export default Textarea;
