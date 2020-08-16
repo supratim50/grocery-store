@@ -1,8 +1,15 @@
+import { useState } from "react";
 import Input from "../form/input";
 import PrimaryButton from "../buttons/primaryButton";
 import DetailsCard from "../cards/detailCard";
 
 const ProfileSection = () => {
+  const [close, setClose] = useState(false);
+
+  const closeFunc = () => {
+    setClose(true);
+  };
+
   return (
     <section className="section-pb">
       <div className="container">
@@ -28,14 +35,12 @@ const ProfileSection = () => {
           Contact Number
         </h2>
         <div className="row mx-auto">
-          <div className="col-12 col-lg-4 px-0 px-lg-3 border">
-            <DetailsCard title="Primary" />
-          </div>
-          <div className="col-12 col-lg-4 px-0 px-lg-3 border">
-            <DetailsCard title="Secondary" />
-          </div>
-          <div className="col-12 col-lg-4 px-0 px-lg-3 border">
-            <DetailsCard title="Primary" />
+          <div
+            className={`col-12 col-lg-4 px-0 px-lg-3 border ${
+              close ? "d-none" : ""
+            }`}
+          >
+            <DetailsCard title="Primary" hover detailsClose={closeFunc} />
           </div>
         </div>
         {/* contact details end */}
