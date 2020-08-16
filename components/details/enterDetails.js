@@ -24,7 +24,11 @@ const EnterDetails = ({ show, onPress, input, textarea }) => {
           add new contact
         </h2>
         {input ? (
-          <Input placeholder="Enter a phone number" classList="mb-3" />
+          <Input
+            placeholder="Enter a phone number"
+            classList="mb-3"
+            inputClass="px-4 py-3 background-grey"
+          />
         ) : (
           ""
         )}
@@ -33,7 +37,7 @@ const EnterDetails = ({ show, onPress, input, textarea }) => {
         ) : (
           ""
         )}
-        <PrimaryBtn text="Save Contact" />
+        <PrimaryBtn text="Save Contact" classList="py-3 px-4" />
       </div>
       <style jsx>{`
         .background {

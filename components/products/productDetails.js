@@ -54,7 +54,7 @@ const roductDetails = ({
                 <Quantity />
               </div>
               {/* button */}
-              <PrimaryBtn text="Buy Now" />
+              <PrimaryBtn text="Buy Now" classList="py-3 px-4" />
             </div>
           </div>
         </div>

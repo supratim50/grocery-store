@@ -5,6 +5,7 @@
 /* ====================== text ========================== */
 .paragraph-text {
   font-size: 15px !important;
+  line-height: 24px !important;
 }
 .paragraph-sm {
   font-size: 13px !important;
@@ -64,4 +65,17 @@
 .section-py {
   padding-bottom: 60px !important;
   padding-top: 60px !important;
+}
+
+.section-mt {
+  margin-top: 50px !important;
+}
+
+.section-mb {
+  margin-bottom: 50px !important;
+}
+
+.section-my {
+  margin-bottom: 50px !important;
+  margin-top: 50px !important;
 }

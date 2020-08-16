@@ -8,7 +8,7 @@ const ProductDropdown = ({ classList }) => {
   const [show, setShow] = useState(false);
   const lists = [
     { id: 1, link: "/profile", text: "Profile" },
-    { id: 2, link: "/", text: "Checkout" },
+    { id: 2, link: "/checkout", text: "Checkout" },
     { id: 3, link: "/", text: "Your Order" },
     { id: 4, link: "/", text: "Order Invoice" },
     { id: 5, link: "/", text: "Logout" },

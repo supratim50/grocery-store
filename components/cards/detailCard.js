@@ -1,21 +1,21 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { FiEdit2, FiX } from "react-icons/fi";
 
 const DetailCard = ({ title, paragraph, hover, active, editFunction }) => {
-  const [close, setClose] = useState(false);
+  // const [close, setClose] = useState(false);
 
-  const closeFunc = () => {
-    setClose(true);
-  };
+  // const closeFunc = () => {
+  //   setClose(true);
+  // };
 
   return (
     <div
-      className={`detailCard p-3 rounded-lg h-100 background-grey ${
+      className={`detailCard py-2 px-3 rounded-lg h-100 background-grey ${
         active ? "active" : ""
       } ${hover ? "hover" : ""}`}
       style={{ transition: "0.5s" }}
     >
-      <div className="d-flex justify-content-between align-items-center mb-2">
+      <div className="d-flex justify-content-between align-items-center mb-1">
         <p className="title paragraph-sm font-weight-bold color-secondary mb-0">
           {title}
         </p>
