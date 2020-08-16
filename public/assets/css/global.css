@@ -1,0 +1,67 @@
+* {
+  font-family: "Poppins";
+}
+
+/* ====================== text ========================== */
+.paragraph-text {
+  font-size: 15px !important;
+}
+.paragraph-sm {
+  font-size: 13px !important;
+}
+.primary-heading {
+  font-size: 45px !important;
+}
+@media screen and (max-width: 767px) {
+  .primary-heading {
+    font-size: 20px !important;
+  }
+}
+.secondary-heading {
+  font-size: 19px !important;
+}
+@media screen and (max-width: 767px) {
+  .secondary-heading {
+    font-size: 15px !important;
+  }
+}
+
+/* color */
+.color-grey {
+  color: rgb(119, 121, 140) !important;
+}
+.color-white {
+  color: #fff !important;
+}
+.color-secondary {
+  color: rgb(13, 17, 54) !important;
+}
+
+.color-primary {
+  color: rgb(0, 158, 127) !important;
+}
+
+.background-grey {
+  background-color: rgb(243, 243, 243) !important;
+}
+.background-white {
+  background-color: #fff !important;
+}
+.background-primary {
+  background-color: rgb(0, 158, 127) !important;
+}
+
+/* utilities */
+
+.section-pt {
+  padding-top: 60px !important;
+}
+
+.section-pb {
+  padding-bottom: 60px !important;
+}
+
+.section-py {
+  padding-bottom: 60px !important;
+  padding-top: 60px !important;
+}
