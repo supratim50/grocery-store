@@ -19,11 +19,11 @@
   }
 }
 .secondary-heading {
-  font-size: 19px !important;
+  font-size: 21px !important;
 }
 @media screen and (max-width: 767px) {
   .secondary-heading {
-    font-size: 15px !important;
+    font-size: 17px !important;
   }
 }
 

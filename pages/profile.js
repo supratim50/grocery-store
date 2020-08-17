@@ -4,7 +4,7 @@ import ProfileSection from "../components/profile/profileSection";
 const Profile = () => {
   return (
     <>
-      <Navbar />
+      <Navbar fill />
       <ProfileSection />
     </>
   );

@@ -35,9 +35,7 @@ const CheckoutSection = () => {
               <p className="paragraph-text color-secondary mb-3 mb-md-0">
                 Voucher
               </p>
-              <p className="paragraph-text color-secondary font-weight-bold mb-0">
-                <InputWithButton />
-              </p>
+              <InputWithButton />
             </div>
             {/* total */}
             <div className="d-flex justify-content-between mb-3">

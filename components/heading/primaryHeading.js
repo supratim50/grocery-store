@@ -1,6 +1,4 @@
-import React from "react";
-
-const PprimaryHeading = ({ classList, text }) => {
+const PrimaryHeading = ({ classList, text }) => {
   return (
     <h2
       className={`paragraph-text text-capitalize ${classList ? classList : ""}`}
@@ -10,4 +8,4 @@ const PprimaryHeading = ({ classList, text }) => {
   );
 };
 
-export default PprimaryHeading;
+export default PrimaryHeading;

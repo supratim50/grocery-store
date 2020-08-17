@@ -4,7 +4,7 @@ import CheckoutSection from "../components/checkout/checkoutSection";
 const Checkout = () => {
   return (
     <>
-      <Navbar />
+      <Navbar fill />
       <CheckoutSection />
     </>
   );

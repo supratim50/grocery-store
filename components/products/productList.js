@@ -20,7 +20,7 @@ const ProductList = () => {
         "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     },
     {
-      id: 1,
+      id: 2,
       image: "/assets/images/product-2.jpg",
       name: "Cherry",
       price: 0.6,
@@ -36,7 +36,7 @@ const ProductList = () => {
         "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     },
     {
-      id: 1,
+      id: 3,
       image: "/assets/images/product-3.jpeg",
       name: "Tata Sampann Unpolished Toor Dal (1 kg)",
       price: 0.6,
@@ -52,7 +52,7 @@ const ProductList = () => {
         "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     },
     {
-      id: 1,
+      id: 4,
       image: "/assets/images/product-4.jpeg",
       name: "Chana Dal (1 kg)",
       price: 0.6,
@@ -68,7 +68,7 @@ const ProductList = () => {
         "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     },
     {
-      id: 1,
+      id: 5,
       image: "/assets/images/product-5.jpg",
       name: "Strawberry",
       price: 0.6,
@@ -90,7 +90,7 @@ const ProductList = () => {
         <ProductLink />
         <div className="row mx-auto section-pt">
           {products.map((product) => (
-            <div className="col-6 col-lg-3 px-1 px-sm-2 mt-3">
+            <div className="col-6 col-lg-3 px-1 px-sm-2 mt-3" key={product.id}>
               <Product
                 imageUrl={product.image}
                 title={product.name}

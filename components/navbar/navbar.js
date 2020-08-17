@@ -9,7 +9,7 @@ import Navitem from "../navbar/navitems";
 import Sidenav from "../navbar/sidenav";
 import SideSearch from "../searchBar/sideSearch";
 
-const Navbar = () => {
+const Navbar = ({ fill }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showSideSearch, setShowSideSearch] = useState(false);
   // for scroll
@@ -46,7 +46,7 @@ const Navbar = () => {
       <nav
         className={`navbar fixed-top w-100 d-flex align-items-center ${
           Yaxis === 0 ? "" : "scrolled"
-        }`}
+        } ${fill ? "scrolled" : ""}`}
       >
         <div className="d-flex justify-content-center align-items-center">
           <i
