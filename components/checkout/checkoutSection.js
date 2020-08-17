@@ -31,11 +31,14 @@ const CheckoutSection = () => {
               </p>
             </div>
             {/* voucher */}
-            <div className="d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-3">
               <p className="paragraph-text color-secondary mb-3 mb-md-0">
                 Voucher
               </p>
-              <InputWithButton />
+              <InputWithButton
+                placeholder="Enter Voucher Code here"
+                buttonText="Apply"
+              />
             </div>
             {/* total */}
             <div className="d-flex justify-content-between mb-3">
