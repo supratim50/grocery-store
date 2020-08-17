@@ -5,10 +5,10 @@ import NavItem from "../navbar/navitems";
 
 const Sidenav = ({ show, onBackPress }) => {
   const lists = [
-    { id: 1, link: "/", text: "Profile" },
-    { id: 2, link: "/", text: "Checkout" },
+    { id: 1, link: "/profile", text: "Profile" },
+    { id: 2, link: "/checkout", text: "Checkout" },
     { id: 3, link: "/", text: "Your Order" },
-    { id: 4, link: "/", text: "Order Invoice" },
+    { id: 4, link: "/order-received", text: "Order Invoice" },
     { id: 5, link: "/", text: "Logout" },
   ];
   return (
@@ -48,7 +48,7 @@ const Sidenav = ({ show, onBackPress }) => {
           {/* link list */}
           <div className="py-4 mt-3">
             {lists.map((list) => (
-              <Link href="/" key={list.id}>
+              <Link href={list.link} key={list.id}>
                 <a className="text-decoration-none">
                   <NavItem
                     classList="px-5"
