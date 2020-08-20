@@ -1,53 +1,57 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { FiEdit2, FiX } from "react-icons/fi";
 
 const DetailCard = ({ title, paragraph, hover, active, editFunction }) => {
-  // const [close, setClose] = useState(false);
+  const [close, setClose] = useState(false);
 
-  // const closeFunc = () => {
-  //   setClose(true);
-  // };
+  const closeFunc = () => {
+    setClose(true);
+  };
 
   return (
     <div
-      className={`detailCard py-2 px-3 rounded-lg h-100 background-grey ${
-        active ? "active" : ""
-      } ${hover ? "hover" : ""}`}
-      style={{ transition: "0.5s" }}
+      className={`col-12 col-md-4 px-0 px-md-3 mt-3 ${close ? "d-none" : ""}`}
     >
-      <div className="d-flex justify-content-between align-items-center mb-1">
-        <p className="title paragraph-sm font-weight-bold color-secondary mb-0">
-          {title}
-        </p>
-        <div className="edit-box d-flex justify-content-center align-items-center">
-          <div
-            className="rounded-circle mr-2 color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
-            style={{
-              width: 25,
-              height: 25,
-              backgroundColor: "rgb(0, 158, 127)",
-              cursor: "pointer",
-            }}
-            onClick={editFunction && editFunction}
-          >
-            <FiEdit2 />
-          </div>
-          <div
-            className="rounded-circle color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
-            style={{
-              width: 25,
-              height: 25,
-              backgroundColor: "rgb(255, 91, 96)",
-              cursor: "pointer",
-            }}
-          >
-            <FiX />
+      <div
+        className={`detailCard py-2 px-3 rounded-lg h-100 background-grey ${
+          active ? "active" : ""
+        } ${hover ? "hover" : ""}`}
+        style={{ transition: "0.5s" }}
+      >
+        <div className="d-flex justify-content-between align-items-center mb-1">
+          <p className="title paragraph-sm font-weight-bold color-secondary mb-0">
+            {title}
+          </p>
+          <div className="edit-box d-flex justify-content-center align-items-center">
+            <div
+              className="rounded-circle mr-2 color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
+              style={{
+                width: 25,
+                height: 25,
+                backgroundColor: "rgb(0, 158, 127)",
+                cursor: "pointer",
+              }}
+              onClick={editFunction && editFunction}
+            >
+              <FiEdit2 />
+            </div>
+            <div
+              className="rounded-circle color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
+              style={{
+                width: 25,
+                height: 25,
+                backgroundColor: "rgb(255, 91, 96)",
+                cursor: "pointer",
+              }}
+              onClick={closeFunc}
+            >
+              <FiX />
+            </div>
           </div>
         </div>
+
+        <p className="paragraph-text color-grey mb-0">{paragraph}</p>
       </div>
-
-      <p className="paragraph-text color-grey mb-0">{paragraph}</p>
-
       <style jsx>{`
         .edit-box {
           opacity: 0;

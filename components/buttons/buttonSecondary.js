@@ -6,9 +6,13 @@ const ButtonSecondary = ({ onPress, classList, text, icon }) => {
       }`}
       onClick={onPress}
     >
-      <i className="mr-2" style={{ marginTop: -4 }}>
-        {icon && icon}
-      </i>
+      {icon ? (
+        <i className="mr-2" style={{ marginTop: -4 }}>
+          {icon}
+        </i>
+      ) : (
+        ""
+      )}
       <p className="paragraph-text font-weight-bold mb-0">{text}</p>
       <style jsx>{`
         .button {

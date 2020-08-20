@@ -56,23 +56,19 @@ const ProfileSection = () => {
             Contact Number
           </h2>
           <div className="row mx-auto section-pb">
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Primary"
-                paragraph="123 123 123"
-                active
-                hover
-                editFunction={addEditContactFunc}
-              />
-            </div>
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Secondary"
-                paragraph="123 123 123"
-                hover
-                editFunction={addEditContactFunc}
-              />
-            </div>
+            <DetailsCard
+              title="Primary"
+              paragraph="123 123 123"
+              active
+              hover
+              editFunction={addEditContactFunc}
+            />
+            <DetailsCard
+              title="Secondary"
+              paragraph="123 123 123"
+              hover
+              editFunction={addEditContactFunc}
+            />
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3 `}>
               <SecondaryButton
                 classList="h-100 rounded-lg color-primary"
@@ -87,21 +83,17 @@ const ProfileSection = () => {
             Contact Number
           </h2>
           <div className="row mx-auto section-pb">
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Primary"
-                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
-                active
-                hover
-              />
-            </div>
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3 `}>
-              <DetailsCard
-                title="Secondary"
-                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
-                hover
-              />
-            </div>
+            <DetailsCard
+              title="Primary"
+              paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+              active
+              hover
+            />
+            <DetailsCard
+              title="Secondary"
+              paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+              hover
+            />
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
               <SecondaryButton
                 classList="h-100 rounded-lg color-primary"
@@ -119,7 +111,10 @@ const ProfileSection = () => {
             <p className="paragraph-sm color-primary font-weight-bold">
               Saved Cards
             </p>
-            <p className="paragraph-sm color-primary font-weight-bold">
+            <p
+              className="paragraph-sm color-primary font-weight-bold"
+              style={{ cursor: "pointer" }}
+            >
               <i className="mr-2">
                 <FiPlus />
               </i>{" "}
@@ -128,15 +123,9 @@ const ProfileSection = () => {
           </div>
           {/* cards */}
           <div className="row mx-auto">
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard active imageUrl="/assets/images/paypal.png" />
-            </div>
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard imageUrl="/assets/images/master-card.png" />
-            </div>
-            <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard imageUrl="/assets/images/visa.png" />
-            </div>
+            <PaymentCard active imageUrl="/assets/images/paypal.png" />
+            <PaymentCard imageUrl="/assets/images/master-card.png" />
+            <PaymentCard imageUrl="/assets/images/visa.png" />
           </div>
           {/* add credit card end */}
         </div>

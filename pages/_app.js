@@ -15,10 +15,17 @@ class MyApp extends App {
       <>
         <Head>
           {/* font family */}
+          {/* poppins */}
           <link
             href="https://fonts.googleapis.com/css?family=Poppins"
             rel="stylesheet"
           ></link>
+          {/* lato */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="//fonts.googleapis.com/css?family=Lato"
+          />
           {/* custom css */}
           <link rel="stylesheet" href="/assets/css/global.css" />
         </Head>

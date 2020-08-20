@@ -1,5 +1,5 @@
 * {
-  font-family: "Poppins";
+  font-family: "Lato";
 }
 
 /* ====================== text ========================== */
@@ -12,6 +12,7 @@
 }
 .primary-heading {
   font-size: 45px !important;
+  font-family: "Poppins" !important;
 }
 @media screen and (max-width: 767px) {
   .primary-heading {

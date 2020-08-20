@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FiShoppingBag, FiX } from "react-icons/fi";
 import CartItem from "./cartItem";
 import InputWithButton from "../form/inputWithButton";
+import SecondaryBtn from "../buttons/buttonSecondary";
 
 const CartDrawer = () => {
   const products = [
@@ -90,8 +91,20 @@ const CartDrawer = () => {
 
   return (
     <>
-      <div className="cart py-4 px-4 background-primary" onClick={showFunc}>
-        <p className="text-paragraph color-white mb-0">Cart</p>
+      <div
+        className="cart p-3 rounded-lg background-primary"
+        onClick={showFunc}
+      >
+        <p className="text-paragraph color-white mb-0">
+          <i>
+            <FiShoppingBag />
+          </i>{" "}
+          6 items
+        </p>
+        <SecondaryBtn
+          text="$13.20"
+          classList="background-white color-primary mt-2"
+        />
       </div>
 
       {/* hide oart */}

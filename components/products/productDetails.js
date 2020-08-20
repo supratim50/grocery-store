@@ -58,11 +58,15 @@ const roductDetails = ({
             </div>
           </div>
         </div>
-        <div className="cross-box p-1 d-inline-block" onClick={close}>
-          <i className="cross paragraph-text font-weight-bold">
-            <FiX />
-          </i>
-        </div>
+      </div>
+
+      <div
+        className="cross-box d-flex justify-content-center align-items-center background-white rounded-circle shadow-sm"
+        onClick={close}
+      >
+        <i className="cross paragraph-text color-secondary font-weight-bold">
+          <FiX />
+        </i>
       </div>
       <style jsx>{`
         .background {
@@ -96,6 +100,10 @@ const roductDetails = ({
           line-height: 2;
         }
 
+        .product-img-box {
+          height: 400px;
+        }
+
         .show {
           opacity: 1 !important;
           visibility: visible !important;
@@ -108,6 +116,9 @@ const roductDetails = ({
             left: 0 !important;
             border-radius: 0 !important;
             transform: translate(0, 0);
+          }
+          .product-img-box {
+            height: auto;
           }
         }
 
@@ -133,15 +144,18 @@ const roductDetails = ({
         }
 
         .cross-box {
-          position: absolute;
+          position: fixed;
+          width: 30px;
+          height: 30px;
           top: 15px;
           right: 25px;
           cursor: pointer;
+          z-index: 99999;
         }
 
         @media screen and (max-height: 767px) {
           .cross-box {
-            top: 20px;
+            top: 10px;
             right: 10px;
           }
         }

@@ -10,40 +10,43 @@ const PaymentCard = ({ imageUrl, active }) => {
 
   return (
     <div
-      className={`payment-card p-3 rounded-lg ${active ? "active" : ""} ${
-        close ? "d-none" : ""
-      }`}
-      style={{ backgroundColor: "rgba(0, 158, 127,0.1)" }}
+      className={`col-12 col-md-4 px-0 px-md-3 mt-3 ${close ? "d-none" : ""}`}
     >
-      <div className="d-flex justify-content-between align-items-center mb-2">
-        <img
-          className="border"
-          src={imageUrl}
-          alt="Image"
-          style={{ maxWidth: 100, maxHeight: 33 }}
-        />
-        <div
-          className="cross rounded-circle color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
-          style={{
-            width: 25,
-            height: 25,
-            backgroundColor: "rgb(255, 91, 96)",
-            cursor: "pointer",
-          }}
-          onClick={closeFunc}
-        >
-          <FiX />
+      <div
+        className={`payment-card p-3 rounded-lg ${active ? "active" : ""} `}
+        style={{ backgroundColor: "rgba(0, 158, 127,0.1)" }}
+      >
+        <div className="d-flex justify-content-between align-items-center mb-2">
+          <img
+            className="border"
+            src={imageUrl}
+            alt="Image"
+            style={{ maxWidth: 100, maxHeight: 33 }}
+          />
+          <div
+            className="cross rounded-circle color-white font-weight-bold paragraph-sm d-flex justify-content-center align-items-center"
+            style={{
+              width: 25,
+              height: 25,
+              backgroundColor: "rgb(255, 91, 96)",
+              cursor: "pointer",
+            }}
+            onClick={closeFunc}
+          >
+            <FiX />
+          </div>
         </div>
+        <p className="paragraph-sm color-secondary text-capitalize">
+          Card Number
+        </p>
+        <p className="paragraph-text color-secondary text-capitalize font-weight-bold mb-2">
+          ****&nbsp; ****&nbsp; ****&nbsp; 4535
+        </p>
+        <p className="paragraph-sm color-secondary text-capitalize font-weight-bold mb-2">
+          John Doe Smith
+        </p>
       </div>
-      <p className="paragraph-sm color-secondary text-capitalize">
-        Card Number
-      </p>
-      <p className="paragraph-text color-secondary text-capitalize font-weight-bold mb-2">
-        ****&nbsp; ****&nbsp; ****&nbsp; 4535
-      </p>
-      <p className="paragraph-sm color-secondary text-capitalize font-weight-bold mb-2">
-        John Doe Smith
-      </p>
+
       <style jsx>{`
         .cross {
           opacity: 0;
