@@ -54,7 +54,7 @@ const Product = ({
               <ButtonSecondary
                 text="cart"
                 icon={<FaShoppingCart />}
-                classList="rounded-pill"
+                classList="rounded-pill color-primary"
                 onPress={addToCart}
               />
             )}

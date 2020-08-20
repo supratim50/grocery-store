@@ -7,7 +7,7 @@ import PaymentCard from "../cards/paymentCard";
 
 const CheckoutSection = () => {
   return (
-    <section className="background-grey section-pb">
+    <section className="background-grey section-pb top-section-pt">
       <div className="container">
         <div className="col-12 col-lg-10 mx-auto rounded-lg background-white p-4 p-md-5">
           {/* pricing div */}
@@ -104,7 +104,7 @@ const CheckoutSection = () => {
             </div>
             <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
               <SecondaryButton
-                classList="h-100 rounded-lg"
+                classList="h-100 rounded-lg color-primary"
                 text="Add Address"
                 // onPress={addEditAddressFunc}
               />
@@ -136,7 +136,7 @@ const CheckoutSection = () => {
             </div>
             <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3 `}>
               <SecondaryButton
-                classList="h-100 rounded-lg"
+                classList="h-100 rounded-lg color-primary"
                 text="Add Contact"
                 // onPress={addEditContactFunc}
               />
@@ -177,7 +177,6 @@ const CheckoutSection = () => {
       </div>
       <style jsx>{`
         section {
-          padding-top: 150px !important;
           height: 100% !important;
         }
       `}</style>

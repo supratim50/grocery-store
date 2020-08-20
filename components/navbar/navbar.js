@@ -8,10 +8,14 @@ import Profile from "../profile/profile";
 import Navitem from "../navbar/navitems";
 import Sidenav from "../navbar/sidenav";
 import SideSearch from "../searchBar/sideSearch";
+import PrimaryButton from "../buttons/primaryButton";
+import SignIn from "../login/signIn";
 
 const Navbar = ({ fill }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showSideSearch, setShowSideSearch] = useState(false);
+  const [logedIn, setLogedIn] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
   // for scroll
   const [Yaxis, setYaxis] = useState(0);
 
@@ -27,6 +31,14 @@ const Navbar = ({ fill }) => {
   const setShowSearchFunc = () => {
     setShowSideSearch(!showSideSearch);
   };
+  // log in open
+  const loginOpenFunc = () => {
+    setLoginOpen(!loginOpen);
+  };
+  // for user login
+  const logedInFunc = () => {
+    setLogedIn(!logedIn);
+  };
 
   return (
     <>
@@ -41,6 +53,12 @@ const Navbar = ({ fill }) => {
         <SideSearch show onBackPress={setShowSearchFunc} />
       ) : (
         <SideSearch />
+      )}
+      {/* signin */}
+      {loginOpen ? (
+        <SignIn onBackPress={loginOpenFunc} signIn={logedInFunc} />
+      ) : (
+        ""
       )}
       {/* navbar */}
       <nav
@@ -69,13 +87,30 @@ const Navbar = ({ fill }) => {
           {/* search */}
           <SearchBar classList="flex-fill d-none d-lg-flex" />
           <div className="nav-box ml-4 pl-2 justify-content-center align-items-center d-none d-lg-flex">
-            <Navitem text="Offer" />
-            <Navitem text="Need Help" icon={<FaQuestionCircle />} />
+            <Link href="/offers">
+              <a className="text-decoration-none">
+                <Navitem text="Offer" />
+              </a>
+            </Link>
+            <Link href="/faq">
+              <a className="text-decoration-none">
+                <Navitem text="Need Help" icon={<FaQuestionCircle />} />
+              </a>
+            </Link>
           </div>
 
           <div className="nav-box ml-4 d-flex justify-content-center align-items-center">
             <ProductDropdown classList="mr-3" />
-            <Profile classList="d-none d-lg-block" />
+            {logedIn ? (
+              <Profile classList="d-none d-lg-block mr-3" />
+            ) : (
+              <PrimaryButton
+                text="Join"
+                classList="px-3 py-2 mr-3"
+                onPress={loginOpenFunc}
+              />
+            )}
+
             <i
               className="color-grey d-block d-lg-none"
               onClick={setShowSearchFunc}
@@ -97,23 +132,16 @@ const Navbar = ({ fill }) => {
             font-size: 21px;
             margin-top: -4px;
           }
+          .nav {
+            max-width: 83% !important;
+          }
           @media screen and (max-width: 992px) {
             .navbar {
               padding: 15px 18px;
             }
           }
           .nav {
-            margin-left: 180px;
-          }
-          @media screen and (max-width: 1060px) {
-            .nav {
-              margin-left: 90px !important;
-            }
-          }
-          @media screen and (max-width: 992px) {
-            .nav {
-              margin-left: 0px !important;
-            }
+            margin-left: auto !important;
           }
         `}</style>
       </nav>

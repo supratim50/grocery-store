@@ -21,7 +21,7 @@ const ProfileSection = () => {
 
   return (
     <>
-      <section className="section-pb">
+      <section className="section-pb top-section-pt">
         <div className="container">
           <h1
             className="font-weight-bold color-secondary mb-4 mb-lg-5 px-3"
@@ -75,7 +75,7 @@ const ProfileSection = () => {
             </div>
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3 `}>
               <SecondaryButton
-                classList="h-100 rounded-lg"
+                classList="h-100 rounded-lg color-primary"
                 text="Add Contact"
                 onPress={addEditContactFunc}
               />
@@ -104,7 +104,7 @@ const ProfileSection = () => {
             </div>
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
               <SecondaryButton
-                classList="h-100 rounded-lg"
+                classList="h-100 rounded-lg color-primary"
                 text="Add Address"
                 onPress={addEditAddressFunc}
               />
@@ -154,11 +154,6 @@ const ProfileSection = () => {
       ) : (
         ""
       )}
-      <style jsx>{`
-        section {
-          padding-top: 150px !important;
-        }
-      `}</style>
     </>
   );
 };

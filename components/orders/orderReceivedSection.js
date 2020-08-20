@@ -3,7 +3,7 @@ import OrderDetails from "../details/orderDetails";
 
 const OrderReceivedSection = () => {
   return (
-    <section className="background-grey">
+    <section className="background-grey top-section-pt">
       <div className="container section-pb">
         <div className="col-12 col-lg-10 mx-auto rounded-lg background-white p-4 p-md-5">
           {/* order received */}
@@ -90,7 +90,6 @@ const OrderReceivedSection = () => {
       </div>
       <style jsx>{`
         section {
-          padding-top: 150px;
           height: 100%;
         }
       `}</style>

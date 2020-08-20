@@ -1,7 +1,7 @@
 const ButtonSecondary = ({ onPress, classList, text, icon }) => {
   return (
     <div
-      className={`button px-3 py-2 color-primary border d-flex justify-content-center align-items-center ${
+      className={`button px-3 py-2 border d-flex justify-content-center align-items-center ${
         classList ? classList : ""
       }`}
       onClick={onPress}
@@ -12,6 +12,7 @@ const ButtonSecondary = ({ onPress, classList, text, icon }) => {
       <p className="paragraph-text font-weight-bold mb-0">{text}</p>
       <style jsx>{`
         .button {
+          border-radius: 8px;
           transition: 0.5s;
           cursor: pointer;
         }
