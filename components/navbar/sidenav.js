@@ -1,5 +1,6 @@
-import React from "react";
+import { useState } from "react";
 import Link from "next/link";
+import PrimaryButton from "../buttons/primaryButton";
 
 import NavItem from "../navbar/navitems";
 
@@ -11,6 +12,7 @@ const Sidenav = ({ show, onBackPress }) => {
     { id: 4, link: "/order-received", text: "Order Invoice" },
     { id: 5, link: "/", text: "Logout" },
   ];
+  const [logedIn, setLogedIn] = useState(false);
   return (
     <>
       <div
@@ -24,26 +26,30 @@ const Sidenav = ({ show, onBackPress }) => {
             className="w-100 py-5 d-flex justify-content-center align-items-center"
             style={{ backgroundColor: "rgb(247, 247, 247)" }}
           >
-            <div className="d-flex align-items-center">
-              <div
-                className="image-box rounded-circle overflow-hidden mr-3"
-                style={{ maxWidth: 50, maxHeight: 50 }}
-              >
-                <img
-                  className="img-fluid"
-                  src="/assets/images/profile.jpg"
-                  alt="Profile Image"
-                />
+            {logedIn ? (
+              <div className="d-flex align-items-center">
+                <div
+                  className="image-box rounded-circle overflow-hidden mr-3"
+                  style={{ maxWidth: 50, maxHeight: 50 }}
+                >
+                  <img
+                    className="img-fluid"
+                    src="/assets/images/profile.jpg"
+                    alt="Profile Image"
+                  />
+                </div>
+                <div className="d-flex flex-column justify-content-between">
+                  <h3 className="paragraph-text font-weight-bold color-secondary">
+                    Devid Dragon
+                  </h3>
+                  <p className="paragraph-text color-grey mb-0">
+                    +91 1236 4598 70
+                  </p>
+                </div>
               </div>
-              <div className="d-flex flex-column justify-content-between">
-                <h3 className="paragraph-text font-weight-bold color-secondary">
-                  Devid Dragon
-                </h3>
-                <p className="paragraph-text color-grey mb-0">
-                  +91 1236 4598 70
-                </p>
-              </div>
-            </div>
+            ) : (
+              <PrimaryButton text="Join" classList="px-3 py-2 mr-3" />
+            )}
           </div>
           {/* link list */}
           <div className="py-4 mt-3">

@@ -3,7 +3,9 @@ import { useState } from "react";
 import { FiShoppingBag, FiX } from "react-icons/fi";
 import CartItem from "./cartItem";
 import InputWithButton from "../form/inputWithButton";
-import SecondaryBtn from "../buttons/buttonSecondary";
+import CheckoutButton from "../buttons/checkoutButton";
+import CartFixed from "./cart";
+import Link from "next/link";
 
 const CartDrawer = () => {
   const products = [
@@ -91,21 +93,7 @@ const CartDrawer = () => {
 
   return (
     <>
-      <div
-        className="cart p-3 rounded-lg background-primary"
-        onClick={showFunc}
-      >
-        <p className="text-paragraph color-white mb-0">
-          <i>
-            <FiShoppingBag />
-          </i>{" "}
-          6 items
-        </p>
-        <SecondaryBtn
-          text="$13.20"
-          classList="background-white color-primary mt-2"
-        />
-      </div>
+      <CartFixed onPress={showFunc} />
 
       {/* hide oart */}
       <div
@@ -171,6 +159,11 @@ const CartDrawer = () => {
               Do you have a voucher ?
             </p>
           )}
+          <Link href="/checkout">
+            <a>
+              <CheckoutButton roundedPill text="Checklist" subText="$20.50" />
+            </a>
+          </Link>
         </div>
       </div>
       <style jsx>{`
@@ -201,15 +194,6 @@ const CartDrawer = () => {
           opacity: 1;
           visibility: visible;
           transform: translateX(0);
-        }
-
-        .cart {
-          position: fixed;
-          top: 50%;
-          right: 0%;
-           {
-            /* transform: translate(50%, 50%); */
-          }
         }
       `}</style>
     </>

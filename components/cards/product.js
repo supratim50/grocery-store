@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ButtonSecondary from "../buttons/buttonSecondary";
 import Quantity from "../quantity/quantity";
-import ProductDetails from "./productDetails";
+import ProductDetails from "../products/productDetails";
 
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -56,6 +56,8 @@ const Product = ({
                 icon={<FaShoppingCart />}
                 classList="rounded-pill color-primary"
                 onPress={addToCart}
+                iconClass="mr-0"
+                textClass="d-none d-md-block"
               />
             )}
           </div>

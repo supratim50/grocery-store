@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { FiEdit2, FiX } from "react-icons/fi";
 
-const DetailCard = ({ title, paragraph, hover, active, editFunction }) => {
+const DetailCard = ({
+  title,
+  paragraph,
+  hover,
+  active,
+  editFunction,
+  classList,
+}) => {
   const [close, setClose] = useState(false);
 
   const closeFunc = () => {
@@ -9,9 +16,7 @@ const DetailCard = ({ title, paragraph, hover, active, editFunction }) => {
   };
 
   return (
-    <div
-      className={`col-12 col-md-4 px-0 px-md-3 mt-3 ${close ? "d-none" : ""}`}
-    >
+    <div className={`${classList ? classList : ""} ${close ? "d-none" : ""}`}>
       <div
         className={`detailCard py-2 px-3 rounded-lg h-100 background-grey ${
           active ? "active" : ""

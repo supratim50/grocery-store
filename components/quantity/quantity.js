@@ -15,7 +15,7 @@ const Quantity = ({ onPress }) => {
   return (
     <div className="quantity btn-group overflow-hidden">
       <button
-        className="color-white p-2 paragraph-text border-0 background-primary"
+        className="minusBtn color-white py-1 px-2 py-md-2 paragraph-text border-0 background-primary"
         onClick={decrease}
       >
         <i>
@@ -23,13 +23,13 @@ const Quantity = ({ onPress }) => {
         </i>
       </button>
       <span
-        className="color-white py-2 px-3 paragraph-text border-0 background-primary"
+        className="color-white py-2 px-2 px-md-3 paragraph-text border-0 background-primary"
         onClick={onPress}
       >
         {quantity}
       </span>
       <button
-        className="color-white p-2 paragraph-text border-0 background-primary"
+        className="plusBtn color-white py-1 px-2 py-md-2 paragraph-text border-0 background-primary"
         onClick={increase}
       >
         <i>
@@ -42,6 +42,12 @@ const Quantity = ({ onPress }) => {
         }
         button:focus {
           outline: none;
+        }
+        .minusBtn {
+          margin-right: -1px;
+        }
+        .plusBtn {
+          margin-left: -1px;
         }
       `}</style>
     </div>

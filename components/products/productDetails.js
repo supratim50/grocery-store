@@ -64,7 +64,10 @@ const roductDetails = ({
         className="cross-box d-flex justify-content-center align-items-center background-white rounded-circle shadow-sm"
         onClick={close}
       >
-        <i className="cross paragraph-text color-secondary font-weight-bold">
+        <i
+          className="cross paragraph-text color-secondary font-weight-bold"
+          style={{ marginTop: -3 }}
+        >
           <FiX />
         </i>
       </div>

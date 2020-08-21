@@ -55,30 +55,38 @@ const CheckoutSection = () => {
             text="Deliver schedule"
           />
           <div className="row mx-auto section-pb">
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="express-delivery"
-                paragraph="90 min express delivery"
-                active
-              />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard title="8am-11am" paragraph="8.00 AM - 11.00 AM" />
-            </div>
+            <DetailsCard
+              title="express-delivery"
+              paragraph="90 min express delivery"
+              active
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <DetailsCard
+              title="8am-11am"
+              paragraph="8.00 AM - 11.00 AM"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <DetailsCard
+              title="8am-11am"
+              paragraph="8.00 AM - 11.00 AM"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <DetailsCard
+              title="8am-11am"
+              paragraph="8.00 AM - 11.00 AM"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <DetailsCard
+              title="8am-11am"
+              paragraph="8.00 AM - 11.00 AM"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
 
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard title="8am-11am" paragraph="8.00 AM - 11.00 AM" />
-            </div>
-
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard title="8am-11am" paragraph="8.00 AM - 11.00 AM" />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard title="8am-11am" paragraph="8.00 AM - 11.00 AM" />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard title="8am-11am" paragraph="8.00 AM - 11.00 AM" />
-            </div>
+            <DetailsCard
+              title="8am-11am"
+              paragraph="8.00 AM - 11.00 AM"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
           </div>
           {/* Deliver schedule */}
           {/* address details */}
@@ -87,21 +95,19 @@ const CheckoutSection = () => {
             text="Delivery Address"
           />
           <div className="row mx-auto section-pb">
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Primary"
-                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
-                active
-                hover
-              />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3 `}>
-              <DetailsCard
-                title="Secondary"
-                paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
-                hover
-              />
-            </div>
+            <DetailsCard
+              title="Primary"
+              paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+              active
+              hover
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <DetailsCard
+              title="Secondary"
+              paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
+              hover
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
             <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
               <SecondaryButton
                 classList="h-100 rounded-lg color-primary"
@@ -117,23 +123,21 @@ const CheckoutSection = () => {
             text="Contact Number"
           />
           <div className="row mx-auto section-pb">
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Primary"
-                paragraph="123 123 123"
-                active
-                hover
-                // editFunction={addEditContactFunc}
-              />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <DetailsCard
-                title="Secondary"
-                paragraph="123 123 123"
-                hover
-                // editFunction={addEditContactFunc}
-              />
-            </div>
+            <DetailsCard
+              title="Primary"
+              paragraph="123 123 123"
+              active
+              hover
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+              // editFunction={addEditContactFunc}
+            />
+            <DetailsCard
+              title="Secondary"
+              paragraph="123 123 123"
+              hover
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+              // editFunction={addEditContactFunc}
+            />
             <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3 `}>
               <SecondaryButton
                 classList="h-100 rounded-lg color-primary"
@@ -162,15 +166,19 @@ const CheckoutSection = () => {
           </div>
           {/* cards */}
           <div className="row mx-auto">
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard active imageUrl="/assets/images/paypal.png" />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard imageUrl="/assets/images/master-card.png" />
-            </div>
-            <div className={`col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3`}>
-              <PaymentCard imageUrl="/assets/images/visa.png" />
-            </div>
+            <PaymentCard
+              active
+              imageUrl="/assets/images/paypal.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <PaymentCard
+              imageUrl="/assets/images/master-card.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <PaymentCard
+              imageUrl="/assets/images/visa.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
           </div>
           {/* add credit card end */}
         </div>

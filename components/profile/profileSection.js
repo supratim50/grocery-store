@@ -61,12 +61,14 @@ const ProfileSection = () => {
               paragraph="123 123 123"
               active
               hover
+              classList="col-12 col-md-4 px-0 px-md-3 mt-3"
               editFunction={addEditContactFunc}
             />
             <DetailsCard
               title="Secondary"
               paragraph="123 123 123"
               hover
+              classList="col-12 col-md-4 px-0 px-md-3 mt-3"
               editFunction={addEditContactFunc}
             />
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3 `}>
@@ -88,11 +90,13 @@ const ProfileSection = () => {
               paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
               active
               hover
+              classList="col-12 col-md-4 px-0 px-md-3 mt-3"
             />
             <DetailsCard
               title="Secondary"
               paragraph="27 Street, 2569 Heritage Road Visalia, CA 93291"
               hover
+              classList="col-12 col-md-4 px-0 px-md-3 mt-3"
             />
             <div className={`col-12 col-md-4 px-0 px-md-3 mt-3`}>
               <SecondaryButton
@@ -123,9 +127,19 @@ const ProfileSection = () => {
           </div>
           {/* cards */}
           <div className="row mx-auto">
-            <PaymentCard active imageUrl="/assets/images/paypal.png" />
-            <PaymentCard imageUrl="/assets/images/master-card.png" />
-            <PaymentCard imageUrl="/assets/images/visa.png" />
+            <PaymentCard
+              active
+              imageUrl="/assets/images/paypal.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <PaymentCard
+              imageUrl="/assets/images/master-card.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
+            <PaymentCard
+              imageUrl="/assets/images/visa.png"
+              classList="col-12 col-md-6 col-lg-4 px-0 px-md-3 mt-3"
+            />
           </div>
           {/* add credit card end */}
         </div>

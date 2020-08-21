@@ -42,6 +42,9 @@
 .color-primary {
   color: rgb(0, 158, 127) !important;
 }
+.color-blue {
+  color: rgb(46, 112, 250) !important;
+}
 
 .background-grey {
   background-color: rgb(243, 243, 243) !important;
@@ -63,6 +66,9 @@
 }
 .background-google:hover {
   background-color: rgb(25, 100, 221) !important;
+}
+.background-sky {
+  background-color: rgba(46, 112, 250, 0.1) !important;
 }
 
 /* utilities */

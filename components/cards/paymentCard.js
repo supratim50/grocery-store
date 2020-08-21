@@ -1,7 +1,7 @@
 import { FiX } from "react-icons/fi";
 import { useState } from "react";
 
-const PaymentCard = ({ imageUrl, active }) => {
+const PaymentCard = ({ imageUrl, active, classList }) => {
   const [close, setClose] = useState(false);
 
   const closeFunc = () => {
@@ -9,9 +9,7 @@ const PaymentCard = ({ imageUrl, active }) => {
   };
 
   return (
-    <div
-      className={`col-12 col-md-4 px-0 px-md-3 mt-3 ${close ? "d-none" : ""}`}
-    >
+    <div className={`${classList ? classList : ""} ${close ? "d-none" : ""}`}>
       <div
         className={`payment-card p-3 rounded-lg ${active ? "active" : ""} `}
         style={{ backgroundColor: "rgba(0, 158, 127,0.1)" }}

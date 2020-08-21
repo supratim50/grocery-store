@@ -1,5 +1,5 @@
 import ProductLink from "./productLink";
-import Product from "./product";
+import Product from "../cards/product";
 import SecondaryBtn from "../buttons/buttonSecondary";
 
 const ProductList = () => {
@@ -106,7 +106,7 @@ const ProductList = () => {
         <div className="d-flex justify-content-center section-pt">
           <SecondaryBtn
             text="Load More"
-            classList="rounded-lg background-white color-primary"
+            classList="rounded-lg background-white color-primary mb-5"
           />
         </div>
       </div>

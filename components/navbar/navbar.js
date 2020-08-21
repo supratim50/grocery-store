@@ -106,7 +106,7 @@ const Navbar = ({ fill }) => {
             ) : (
               <PrimaryButton
                 text="Join"
-                classList="px-3 py-2 mr-3"
+                classList="px-3 py-2 mr-3 d-none d-lg-block"
                 onPress={loginOpenFunc}
               />
             )}
@@ -121,7 +121,7 @@ const Navbar = ({ fill }) => {
         </div>
         <style jsx>{`
           .navbar {
-            padding: 20px 50px;
+            padding: 15px 50px;
             transition: 0.5s;
           }
           .scrolled {
