@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OrderProgress from "../progressBar/orderProgress";
+import ProductTable from "../tableRow/productTable";
 
 const OrderDetails = () => {
   const [show, setShow] = useState(false);
@@ -76,6 +77,10 @@ const OrderDetails = () => {
           <OrderProgress />
           <OrderProgress />
           <OrderProgress />
+        </div>
+        {/* product table */}
+        <div className="table-box py-3">
+          <ProductTable />
         </div>
       </div>
       <style jsx>{`
