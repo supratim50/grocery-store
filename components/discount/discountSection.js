@@ -2,7 +2,7 @@ import DiscountCard from "../cards/discountCard";
 
 const DiscountSection = () => {
   return (
-    <section className="section-py">
+    <section className="section-py background-white">
       <div className="container-fluid">
         <div className="row mx-auto px-0">
           <div className="col-12 col-md-6 col-lg-4">

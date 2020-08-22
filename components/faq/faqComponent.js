@@ -9,7 +9,11 @@ const FaqComponent = ({ question, answer, classList }) => {
   };
 
   return (
-    <div className={`shadow-sm rounded-lg ${classList ? classList : ""}`}>
+    <div
+      className={`shadow-sm rounded-lg ${
+        classList ? classList : ""
+      } background-white`}
+    >
       <div className="p-4 question d-flex justify-content-between align-items-center">
         <h3 className="paragraph-text color-secondary font-weight-bold mb-0">
           {question}

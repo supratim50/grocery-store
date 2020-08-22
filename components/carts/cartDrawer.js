@@ -161,7 +161,12 @@ const CartDrawer = () => {
           )}
           <Link href="/checkout">
             <a>
-              <CheckoutButton roundedPill text="Checklist" subText="$20.50" />
+              <CheckoutButton
+                roundedPill
+                text="Checklist"
+                classList="mt-3"
+                subText="$20.50"
+              />
             </a>
           </Link>
         </div>

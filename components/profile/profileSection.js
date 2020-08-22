@@ -21,7 +21,7 @@ const ProfileSection = () => {
 
   return (
     <>
-      <section className="section-pb top-section-pt">
+      <section className="section-pb top-section-pt background-white">
         <div className="container">
           <h1
             className="font-weight-bold color-secondary mb-4 mb-lg-5 px-3"

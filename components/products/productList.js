@@ -86,7 +86,7 @@ const ProductList = () => {
     },
   ];
   return (
-    <section className="section-py background-grey">
+    <section className="section-py">
       <div className="container">
         <ProductLink />
         <div className="row mx-auto section-pt">

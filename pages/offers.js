@@ -4,7 +4,7 @@ const Offers = () => {
   return (
     <>
       <Navbar fill />
-      <section className="top-section-pt background-grey">
+      <section className="top-section-pt">
         <div className="offers-zone">
           <div className="row px-0 mx-auto">
             <OffersComponent
