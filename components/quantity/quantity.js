@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-const Quantity = ({ onPress }) => {
+const Quantity = ({ onPress, classList }) => {
   const [quantity, setQuantity] = useState(0);
   //   decrease method
   const decrease = () => {

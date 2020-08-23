@@ -9,9 +9,9 @@ const OrderDetails = () => {
   };
 
   return (
-    <div className="py-3 px-4 shadow-sm background-white">
+    <div className="shadow-sm background-white">
       <div
-        className={`${show ? "pb-3 pb-md-4 border-bottom" : ""}`}
+        className={`py-3 px-4 ${show ? "pb-md-4 border-bottom" : ""}`}
         style={{ cursor: "pointer" }}
         onClick={showFunc}
       >
@@ -40,7 +40,7 @@ const OrderDetails = () => {
       </div>
       {/* hide section */}
       <div className={`hide-section py-3 py-md-4 d-none ${show ? "show" : ""}`}>
-        <div className="row mx-auto mb-4">
+        <div className="row mx-auto mb-4 py-3 px-4">
           {/* delivery address */}
           <div className="col-12 col-md-8 px-0 mb-3 mb-md-0">
             <h2 className="paragraph-text font-weight-bold color-secondary">
@@ -73,13 +73,13 @@ const OrderDetails = () => {
           </div>
         </div>
         {/* progress bar */}
-        <div className="d-flex flex-column flex-md-row justify-content-center align-items-start align-items-md-center py-3 py-md-4 px-0 px-md-3">
+        <div className="d-flex flex-column flex-md-row justify-content-center align-items-start align-items-md-center py-3 px-4 py-md-4 px-md-3">
           <OrderProgress />
           <OrderProgress />
           <OrderProgress />
         </div>
         {/* product table */}
-        <div className="table-box py-3">
+        <div className="table-box py-3 px-md-4">
           <ProductTable />
         </div>
       </div>
@@ -87,6 +87,9 @@ const OrderDetails = () => {
         .show {
           display: block !important;
           animation: showAnim 0.5s ease-in-out;
+        }
+        .table-box {
+          overflow-x: auto;
         }
 
         @keyframes showAnim {

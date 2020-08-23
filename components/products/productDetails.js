@@ -20,7 +20,9 @@ const roductDetails = ({
         className={`background w-100 h-100 ${show ? "show" : ""}`}
         onClick={close}
       ></div>
-      <div className={`w-100 details-box p-4 ${show ? "show" : ""}`}>
+      <div
+        className={`w-100 details-box py-4 px-2 p-md-4 ${show ? "show" : ""}`}
+      >
         <div className="row mt-4 w-100 mx-auto">
           <div className="col-12 col-md-6 p-2">
             {/* product image */}
@@ -31,6 +33,7 @@ const roductDetails = ({
             <div className="d-flex justify-content-between align-items-center pt-md-3">
               {smallImages.map((smallImage) => (
                 <ProductSmallImage
+                  classList="mr-1"
                   key={smallImage.id}
                   imgUrl={smallImage.image}
                 />

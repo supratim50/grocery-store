@@ -6,7 +6,7 @@ const MyOrder = () => {
     <>
       <Navbar fill />
       <section className="top-section-pt">
-        <div className="container border">
+        <div className="container px-0 px-md-3">
           <OrderDetails />
         </div>
       </section>

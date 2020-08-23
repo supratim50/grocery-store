@@ -8,7 +8,7 @@ const Cart = ({ onPress }) => {
       onClick={onPress}
     >
       <p className="text-paragraph color-white mb-0">
-        <i>
+        <i className="mr-2">
           <FiShoppingBag />
         </i>{" "}
         6 items

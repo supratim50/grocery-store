@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import { FiX } from "react-icons/fi";
+import Quntity from "../quantity/quantity";
+import Quantity from "../quantity/quantity";
 
 const CartItem = ({ imageUrl, title, price, piece, classList }) => {
   const [close, setClose] = useState(false);
@@ -21,9 +23,13 @@ const CartItem = ({ imageUrl, title, price, piece, classList }) => {
         <h2 className="paragraph-text color-secondary font-weight-bold text-capitalize mb-2 text-truncate">
           {title}
         </h2>
-        <p className="paragraph-text color-primary font-weight-bold mb-2">
-          {price}
-        </p>
+        <div className="d-flex justify-content-between align-items-center">
+          <p className="paragraph-text color-primary font-weight-bold mb-2">
+            ${price}
+          </p>
+          <Quantity />
+        </div>
+
         <p className="paragraph-text color-secondary mb-0">{piece}</p>
       </div>
       <div className="col-2 d-flex align-items-center">

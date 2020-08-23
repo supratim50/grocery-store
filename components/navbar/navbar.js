@@ -38,6 +38,7 @@ const Navbar = ({ fill }) => {
   // for user login
   const logedInFunc = () => {
     setLogedIn(!logedIn);
+    loginOpenFunc();
   };
 
   return (

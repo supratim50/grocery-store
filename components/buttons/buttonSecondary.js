@@ -13,15 +13,13 @@ const ButtonSecondary = ({
       }`}
       onClick={onPress}
     >
-      {icon ? (
+      {icon && (
         <i
           className={`mr-md-2 ${iconClass ? iconClass : ""}`}
           style={{ marginTop: -4 }}
         >
           {icon}
         </i>
-      ) : (
-        ""
       )}
       <p
         className={`paragraph-text font-weight-bold mb-0 ${
@@ -37,7 +35,7 @@ const ButtonSecondary = ({
           cursor: pointer;
         }
         .button:hover {
-          background-color: rgb(0, 158, 127) !important;
+          background-color: rgb(0, 158, 127);
           color: #fff !important;
         }
       `}</style>
